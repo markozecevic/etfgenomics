@@ -11953,7 +11953,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="gb-2013-14-4-r36-1.jpg" width="550"></p>
+<p><img src="images/gb-2013-14-4-r36-1.jpg" width="550"></p>
 <ol>
 <li>A read extending a few bases into the flanking exon can be aligned to the intron instead of the exon. </li>
 <li>A read spanning multiple exons from genes with processed pseudogene copies can be aligned to the pseudogene copies instead of the gene from which it originates.</li>
@@ -11988,8 +11988,8 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="legend.png" width="600">
-<img src="th1.png" width="600"></p>
+<p><img src="images/legend.png" width="600">
+<img src="images/th1.png" width="600"></p>
 <p>Given RNA-Seq reads as input, TopHat2 begins by mapping reads against the known transcriptome (if available).</p>
 
 </div>
@@ -11999,7 +11999,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="th2.png" width="600"></p>
+<p><img src="images/th2.png" width="600"></p>
 <p>TopHat2 aligns unmapped reads against the genome. Any reads contained entirely within exons will be mapped, whereas other spanning introns may not be.</p>
 
 </div>
@@ -12009,7 +12009,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="th3.png" width="600"></p>
+<p><img src="images/th3.png" width="600"></p>
 <p>The unmapped reads are split into smaller non-overlapping segments (25 bp each by default) which are then aligned against the genome.</p>
 
 </div>
@@ -12019,7 +12019,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="th4.png" width="600"></p>
+<p><img src="images/th4.png" width="600"></p>
 <p>Tophat2 examines any cases in which the left and right segments of the same read are mapped within a user-defined maximum intron size (usually between 50 and 100,000 bp). When this pattern is detected, TopHat2 re-aligns the entire read sequence to that genomic region in order to identify the most likely location of the splice site. It pays attention to the known junction signals (GT-AG, GC-AG, and AT-AC). The resulting spliced sequences are collected as a set of potential transcript fragments. Any reads not mapped in the previous stages (or mapped very poorly) are then re-aligned against this novel transcriptome.</p>
 
 </div>
@@ -12029,7 +12029,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="th7.png" width="600"></p>
+<p><img src="images/th7.png" width="600"></p>
 <p>After these steps, some of the reads may have been aligned incorrectly by extending an exonic alignment a few bases into the adjacent intron. TopHat2 checks if such alignments extend into the introns identified in the split-alignment phase; if so, it can realign these reads to the adjacent exons instead.</p>
 
 </div>
@@ -12049,7 +12049,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Alignment-file">Alignment file<a class="anchor-link" href="#Alignment-file">&#182;</a></h2><p><img src="20110524zurichngs-1st-pub-61-728.jpg" width="700"></p>
+<h2 id="Alignment-file">Alignment file<a class="anchor-link" href="#Alignment-file">&#182;</a></h2><p><img src="images/20110524zurichngs-1st-pub-61-728.jpg" width="700"></p>
 <p>CIGAR: a string describing how the read aligns with the reference. It consists of one or more components. Each component comprises an operator and the number of bases which the operator applies to. Operators are: MIDNSHP=X.</p>
 <p><a href="https://broadinstitute.github.io/picard/explain-flags.html">https://broadinstitute.github.io/picard/explain-flags.html</a></p>
 

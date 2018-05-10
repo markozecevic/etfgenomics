@@ -11916,7 +11916,7 @@ a.anchor-link {
 <h2 id="Motivation-for-RNA-Seq-quantification">Motivation for RNA-Seq quantification<a class="anchor-link" href="#Motivation-for-RNA-Seq-quantification">&#182;</a></h2><ul>
 <li><p>Typical studies:</p>
 <ul>
-<li><p>DNA-Seq -&gt; alignment -&gt; variant calling -&gt; genome wide association study;</p>
+<li><p>DNA-Seq -&gt; alignment -&gt; variant calling -&gt; genome wide association study (GWAS);</p>
 <p><img src="images/GWAS2-700x438.png" width="400"></p>
 </li>
 <li><p>RNA-Seq -&gt; alignment -&gt; quantification -&gt; differential expression analysis</p>
@@ -11968,17 +11968,17 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Gene-level-quantification">Gene level quantification<a class="anchor-link" href="#Gene-level-quantification">&#182;</a></h2><p>We shall, for simplicity's sake, only perform gene level quantification. Even though it has some drawbacks, it's a strategy still used by most genomic scientists. Here's what we have at the beginning of the quantification step and what we want to estimate:</p>
 <ul>
-<li>We <strong>have</strong>: aligned reads. A file format called SAM/BAM is now the standard formats for next-generation sequence alignments.</li>
+<li>We <strong>have</strong>: aligned reads and annotations. A file format called SAM/BAM is now the standard formats for next-generation sequence alignments.</li>
 <li>We <strong>estimate</strong>: relative abundance.</li>
 </ul>
-<p>We'll start with some simple methods to compare two features. We say that 2 intervals overlap if any region of the two features cover the same position.</p>
+<p>We'll start with some simple methods to find if two intervals overlap.</p>
 
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">overlap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -12010,82 +12010,15 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">region1</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;chr3&quot;</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">82</span><span class="p">)</span>
 <span class="n">region2</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;chr4&quot;</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">82</span><span class="p">)</span>
 <span class="n">region3</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;chr3&quot;</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
-<span class="n">region4</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;chr3&quot;</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">107</span><span class="p">)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">overlap</span><span class="p">(</span><span class="n">region1</span><span class="p">,</span> <span class="n">region2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">overlap</span><span class="p">(</span><span class="n">region1</span><span class="p">,</span> <span class="n">region3</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -12095,7 +12028,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">overlap</span><span class="p">(</span><span class="n">region1</span><span class="p">,</span> <span class="n">region4</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">overlap</span><span class="p">(</span><span class="n">region1</span><span class="p">,</span> <span class="n">region2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12122,6 +12055,39 @@ a.anchor-link {
 </div>
 </div>
 
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">overlap</span><span class="p">(</span><span class="n">region1</span><span class="p">,</span> <span class="n">region3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12134,7 +12100,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># the location of DEFB125 gene in human genome, gencode.v27 annotation</span>
@@ -12150,14 +12116,14 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To start exploring reads from a SAM/BAM file, let's first load the file.</p>
+<p>To start exploring reads from a SAM/BAM file, we first need to load the file.</p>
 
 </div>
 </div>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pysam</span>
@@ -12184,14 +12150,15 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>An important and very common application is to count the number of reads (aligned fragments) that overlap a give feature (i.e. region of the genome or gene). One simple approach to doing this is to make a list of all reads generated and simply iterate over the reads to identify whether a read overlaps a region. In this case we need an overlap method that can compare a simple interval (defined by a tuple of chr, start, end) with a pysam AlignedSegment object. This overlap method needs the AlignmentFile object to decode chromosome name, otherwise it is very similar to the above overlap() function.</p>
+<p>An important and very common application is to count the number of reads (aligned fragments) that overlap a given feature (i.e. region of the genome or gene). One simple approach to doing this is to make a list of all reads generated and simply iterate over the reads to identify whether a read overlaps a region.</p>
+<p>In this case we need an overlap method that can compare a simple interval (defined by a tuple of sequence, start, end) with a pysam AlignedSegment object. This overlap method also needs the AlignmentFile object to decode the chromosome name.</p>
 
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">overlap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">gene</span><span class="p">,</span> <span class="n">bamfile</span><span class="p">):</span>
@@ -12247,8 +12214,8 @@ for x in bamfile.fetch():
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 3.99 s, sys: 35.8 ms, total: 4.02 s
-Wall time: 4.03 s
+<pre>CPU times: user 3.98 s, sys: 34.9 ms, total: 4.01 s
+Wall time: 4.02 s
 </pre>
 </div>
 </div>
@@ -12294,8 +12261,6 @@ Wall time: 4.03 s
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The problem with this approach is that to do this, you will need to store the entire file in memory. Worse than that, in order to find the reads within a single gene, you would need to iterate over the entire file, which can contain hundreds of millions of reads. This is quite slow even for a single gene, but will only increase if you want to look at many genes.</p>
 <p>Instead, more efficient datastructures (and indexing schemes) can be used to retrieve reads based on positions in more efficient ways.</p>
-<p>Now that you have access to all of the methods in the Pysam package. Let's take a tour of some of the things you can do in Pysam. We'll start by counting the number of reads over the same region above, but in a smarter way.</p>
-<p>(Note: the exact way Pysam, Picard and other tools implement this is based on a similar concept to the interval tree, but generally involve a tree built on a file index so as to avoid reading the entire file into memory, but for the purposes of this discussion the implementation details are not important).</p>
 <p>To get the reads overlapping a given region, Pysam has a method called fetch(), which takes the genomic coordinates and returns an iterator of all reads overlapping that region.</p>
 
 </div>
@@ -12341,8 +12306,8 @@ for x in bam_iter:
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 1.96 ms, sys: 893 µs, total: 2.85 ms
-Wall time: 1.91 ms
+<pre>CPU times: user 2.21 ms, sys: 878 µs, total: 3.08 ms
+Wall time: 2.07 ms
 </pre>
 </div>
 </div>
@@ -12386,7 +12351,7 @@ Wall time: 1.91 ms
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Not surprisingly, they are the same - the big difference is that the second method is significantly faster. The reason for this is that Pysam (and Samtools, Picard, and other similar packages) make use of clever tricks to index the file by genomic positions to more efficiently search for reads within a given genomic interval.</p>
+<p>Not surprisingly, they are the same - the big difference is that the second method is significantly faster. The reason for this is that Pysam (like Samtools, Picard, and other similar toolkits) make use of clever tricks to index the file by genomic positions to more efficiently search for reads within a given genomic interval.</p>
 
 </div>
 </div>
@@ -12429,7 +12394,7 @@ Wall time: 1.91 ms
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>You can run this with any gene tuple now</p>
+<p>You can run this with any gene tuple now:</p>
 
 </div>
 </div>
@@ -12474,7 +12439,7 @@ Wall time: 1.91 ms
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, let's compute the gene counts for all genes. We'll start by reading in all genes</p>
+<p>Now, let's compute the gene counts for all genes. We'll start by reading in all genes:</p>
 
 </div>
 </div>

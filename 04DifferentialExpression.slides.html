@@ -13333,7 +13333,7 @@ $$\sigma_{Y}^2 = \frac{1}{n}\sum_{i=1}^{n}(y_{i}-\mu_{Y})^{2}$$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If $X$ and $Y$ are two random variables independent of each other, then the variance of $X + Y$ is the sum of the
-variances $\sigma_{X}^{2} + \sigma_{Y}^{2}$. The sum of normal variables is again normal. <strong>Under the null hypothesis</strong> (when the mean difference is 0), the ratio:</p>
+variances $\sigma_{X}^{2} + \sigma_{Y}^{2}$. The sum (or the difference) of normal variables is again normal. <strong>Under the null hypothesis</strong> (when the mean difference is 0), the ratio:</p>
 <p>$$\frac{\bar{Y}-\bar{X}}{\sqrt{\frac{\sigma_{Y}^{2}}{N}+\frac{\sigma_{X}^{2}}{M}}}$$</p>
 <p>is approximated by a normal distribution centered at 0 and standard deviation 1. Using this approximation makes computing p-values simple because we know the proportion of the distribution under any value. For example, only 5% of these values are larger than 2 (in absolute value).</p>
 
@@ -13360,7 +13360,7 @@ $$s_{Y}^2 = \frac{1}{N-1}\sum_{i=1}^{N}(Y_{i}-\bar{Y})^{2}$$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="The-t-distribution">The t-distribution<a class="anchor-link" href="#The-t-distribution">&#182;</a></h2><p>The CLT relies on large samples, what we refer to as <em>asymptotic</em> results. When the CLT does not apply, there is another option that does not rely on asymptotic results. When the original population from which a random variable, say $Y$, is sampled is normally distributed with mean 0, then we can calculate the distribution of:</p>
-<p>$$N\frac{\bar{Y}-0}{\sigma_{Y}}$$</p>
+<p>$$\sqrt{N}\frac{\bar{Y}-0}{\sigma_{Y}}$$</p>
 <p>This is the ratio of two random variables so it is not necessarily normal. The fact that the denominator can be small by chance increases the probability of observing large values. In 1908. William Sealy Gosset, an employee of the Guinness brewing company, deciphered the distribution of this random variable and published a paper under the pseudonym “Student”. The distribution is therefore called Student’s t-distribution.</p>
 <p>$$f(t)=\frac{\Gamma(\frac{\nu+1}{2})}{\sqrt{\nu\pi}\Gamma(\frac{\nu}{2})}\left (1+\frac{t^2}{\nu} \right )^{-\frac{\nu+1}{2}}$$</p>
 <p>where $\nu$ is the degrees of freedom.</p>

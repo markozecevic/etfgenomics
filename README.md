@@ -6,4 +6,4 @@
 
 [3. Quantification](https://markozecevic.github.io/etfgenomics/03Quantification.slides.html#)
 
-[4. Differential Expression (incomplete)](https://markozecevic.github.io/etfgenomics/04DifferentialExpression.slides.html#/)
+[4. Differential Expression](https://markozecevic.github.io/etfgenomics/04DifferentialExpression.slides.html#/)

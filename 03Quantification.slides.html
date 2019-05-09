@@ -11932,7 +11932,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="RNA-Seq-quantification">RNA-Seq quantification<a class="anchor-link" href="#RNA-Seq-quantification">&#182;</a></h2><p>Raw counting or probabilistic estimation dilemma is (mostly) about doing analysis on gene vs transcript level.</p>
+<h2 id="RNA-Seq-quantification">RNA-Seq quantification<a class="anchor-link" href="#RNA-Seq-quantification">&#182;</a></h2><p>Counting versus probabilistic estimation dilemma is (mostly) about doing analysis on gene versus transcript level.</p>
 <ul>
 <li>When quantifying on <strong>gene</strong> level - we simply count the number of reads aligned to each gene.</li>
 <li>On <strong>transcript</strong> level, we need an algorithm such as the Expectation Maximization (EM, pictured below) to deal with the uncertainty.</li>
@@ -11978,7 +11978,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">overlap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -12010,7 +12010,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">region1</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;chr3&quot;</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">82</span><span class="p">)</span>
@@ -12025,7 +12025,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">overlap</span><span class="p">(</span><span class="n">region1</span><span class="p">,</span> <span class="n">region2</span><span class="p">)</span>
@@ -12041,7 +12041,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -12058,7 +12058,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">overlap</span><span class="p">(</span><span class="n">region1</span><span class="p">,</span> <span class="n">region3</span><span class="p">)</span>
@@ -12074,7 +12074,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -12100,7 +12100,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># the location of DEFB125 gene in human genome, gencode.v27 annotation</span>
@@ -12123,7 +12123,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pysam</span>
@@ -12141,7 +12141,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note the 'rb' parameter indicates to read the file as binary, which is the BAM format (BAM stands for Binary Alignment Map). If loading a SAM file, this parameter does not need to be specified</p>
+<p>Note the 'rb' parameter indicates to read the file as binary, which is the BAM format (BAM stands for Binary Alignment Map). If loading a SAM file, this parameter does not need to be specified.</p>
 
 </div>
 </div>
@@ -12158,7 +12158,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">overlap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">gene</span><span class="p">,</span> <span class="n">bamfile</span><span class="p">):</span>
@@ -12182,7 +12182,7 @@ a.anchor-link {
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
@@ -12190,13 +12190,10 @@ a.anchor-link {
 # code to iterate over reads and count for a single gene
 naive_gene_count = 0
 
-global ref
-
 for x in bamfile.fetch():
     # Note x is of type pysam.AlignedSegment
     if(overlap(x, gene, bamfile)):
         naive_gene_count += 1
-    ref = x.reference_end
     
 </pre></div>
 
@@ -12214,8 +12211,8 @@ for x in bamfile.fetch():
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 3.98 s, sys: 34.9 ms, total: 4.01 s
-Wall time: 4.02 s
+<pre>CPU times: user 3.25 s, sys: 33.3 ms, total: 3.29 s
+Wall time: 3.29 s
 </pre>
 </div>
 </div>
@@ -12226,7 +12223,7 @@ Wall time: 4.02 s
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">naive_gene_count</span><span class="p">)</span>
@@ -12268,7 +12265,7 @@ Wall time: 4.02 s
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">bam_iter</span> <span class="o">=</span> <span class="n">bamfile</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">gene</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">gene</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">gene</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
@@ -12281,7 +12278,7 @@ Wall time: 4.02 s
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
@@ -12306,8 +12303,8 @@ for x in bam_iter:
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 2.21 ms, sys: 878 µs, total: 3.08 ms
-Wall time: 2.07 ms
+<pre>CPU times: user 2.45 ms, sys: 1.37 ms, total: 3.82 ms
+Wall time: 2.52 ms
 </pre>
 </div>
 </div>
@@ -12318,7 +12315,7 @@ Wall time: 2.07 ms
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pysam_gene_count</span><span class="p">)</span>
@@ -12367,7 +12364,7 @@ Wall time: 2.07 ms
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">read_count</span><span class="p">(</span><span class="n">gene</span><span class="p">,</span> <span class="n">bamfile</span><span class="p">):</span>
@@ -12401,7 +12398,7 @@ Wall time: 2.07 ms
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># the location of ZNFX1 gene in human genome, gencode.v27 annotation</span>
@@ -12420,7 +12417,7 @@ Wall time: 2.07 ms
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -12446,7 +12443,7 @@ Wall time: 2.07 ms
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
@@ -12475,8 +12472,8 @@ with open(&#39;gencode.v27.chr20.bed&#39;, &#39;r&#39;) as f:
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 4.73 s, sys: 72.8 ms, total: 4.81 s
-Wall time: 4.81 s
+<pre>CPU times: user 4.69 s, sys: 94.3 ms, total: 4.79 s
+Wall time: 4.85 s
 </pre>
 </div>
 </div>
@@ -12496,7 +12493,7 @@ Wall time: 4.81 s
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">gene_counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;ARFGEF2&quot;</span><span class="p">))</span>
@@ -12523,6 +12520,1024 @@ Wall time: 4.81 s
 1641
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(Within-sample)-Normalization">(Within-sample) Normalization<a class="anchor-link" href="#(Within-sample)-Normalization">&#182;</a></h2><p>In previous slides, we've seen how we can compute raw <em>counts</em>, i.e. number of reads that align to a particular feature (gene or transcript).</p>
+<p>$$X_{i}$$</p>
+<p>These numbers are heavily dependent on two things:</p>
+<ul>
+<li>The amount of fragments sequenced </li>
+<li>The length of the feature, or more appropriately, the effective length. Effective length refers to the number of possible start sites a feature could have generated a fragment of that particular length. In practice, the effective length is usually computed as:</li>
+</ul>
+<p>$$\widetilde{l_{i}}=l_{i}-\mu_{FLD}+1$$</p>
+<p>Since counts are NOT scaled by the length of the feature, all units in this category are not comparable within a sample without adjusting for the feature length!</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Different-units">Different units<a class="anchor-link" href="#Different-units">&#182;</a></h3><ul>
+<li><strong>R</strong>eads <strong>P</strong>er <strong>K</strong>ilobase per <strong>M</strong>illion reads mapped (<strong>RPKM</strong>), or for the paired-end reads: <strong>FPKM</strong> (<strong>F</strong>ragments instead of <strong>R</strong>eads).</li>
+</ul>
+<p>$$FPKM_{i}=\frac{X_i}{\left ( \frac{\widetilde{l_{i}}}{10^{3}}\left ( \frac{N}{10^{6}} \right ) \right )} = \frac{X_i}{\widetilde{l_{i}}N}\cdot 10^{9}$$</p>
+<ul>
+<li><strong>T</strong>ranscripts <strong>P</strong>er <strong>M</strong>illion (<strong>TPM</strong>)</li>
+</ul>
+<p>$$TPM_{i}=\frac{X_i}{\widetilde{l_{i}}}\cdot \left ( \frac{1}{\Sigma_{j}\frac{X_j}{\widetilde{l_{j}}}} \right ) \cdot 10^{6}$$</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">counts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Gene Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A(2kb)&#39;</span><span class="p">,</span> <span class="s1">&#39;B(4kb)&#39;</span><span class="p">,</span> <span class="s1">&#39;C(1kb)&#39;</span><span class="p">,</span> <span class="s1">&#39;D(10kb)&#39;</span><span class="p">],</span>
+          <span class="s1">&#39;Rep1 Counts&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+          <span class="s1">&#39;Rep2 Counts&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+          <span class="s1">&#39;Rep3 Counts&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+         <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Gene Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Rep1 Counts&#39;</span><span class="p">,</span> <span class="s1">&#39;Rep2 Counts&#39;</span><span class="p">,</span> <span class="s1">&#39;Rep3 Counts&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Gene Name&#39;</span><span class="p">)</span>
+
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[28]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rep1 Counts</th>
+      <th>Rep2 Counts</th>
+      <th>Rep3 Counts</th>
+    </tr>
+    <tr>
+      <th>Gene Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A(2kb)</th>
+      <td>10</td>
+      <td>12</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>B(4kb)</th>
+      <td>20</td>
+      <td>25</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <th>C(1kb)</th>
+      <td>5</td>
+      <td>8</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>D(10kb)</th>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's first calculate the abundances in FPKM units. We first divide by the total number of reads:</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># library size normalization (division by 10 instead of 10^6)</span>
+<span class="n">df_rpkm</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">df_rpkm</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[72]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rep1 Counts</th>
+      <th>Rep2 Counts</th>
+      <th>Rep3 Counts</th>
+      <th>kb</th>
+    </tr>
+    <tr>
+      <th>Gene Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A(2kb)</th>
+      <td>2.86</td>
+      <td>2.67</td>
+      <td>2.83</td>
+      <td>1.18</td>
+    </tr>
+    <tr>
+      <th>B(4kb)</th>
+      <td>5.71</td>
+      <td>5.56</td>
+      <td>5.66</td>
+      <td>2.35</td>
+    </tr>
+    <tr>
+      <th>C(1kb)</th>
+      <td>1.43</td>
+      <td>1.78</td>
+      <td>1.42</td>
+      <td>0.59</td>
+    </tr>
+    <tr>
+      <th>D(10kb)</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.09</td>
+      <td>5.88</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Then we normalize for gene length:</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># save gene sizes in new column</span>
+<span class="n">df_rpkm</span><span class="p">[</span><span class="s1">&#39;kb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+
+<span class="c1"># gene size normalization</span>
+<span class="n">df_rpkm</span> <span class="o">=</span> <span class="n">df_rpkm</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">df_rpkm</span><span class="o">.</span><span class="n">kb</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">df_rpkm</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;kb&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[74]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rep1 Counts</th>
+      <th>Rep2 Counts</th>
+      <th>Rep3 Counts</th>
+    </tr>
+    <tr>
+      <th>Gene Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A(2kb)</th>
+      <td>1.43</td>
+      <td>1.34</td>
+      <td>1.42</td>
+    </tr>
+    <tr>
+      <th>B(4kb)</th>
+      <td>1.43</td>
+      <td>1.39</td>
+      <td>1.42</td>
+    </tr>
+    <tr>
+      <th>C(1kb)</th>
+      <td>1.43</td>
+      <td>1.78</td>
+      <td>1.42</td>
+    </tr>
+    <tr>
+      <th>D(10kb)</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.01</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The sums of total normalized counts in each column are not equal as we prove below:</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># FPKM normalization sums per samples are not equal (samples are not comparable).</span>
+<span class="n">df_rpkm</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;kb&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[76]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Rep1 Counts    4.29
+Rep2 Counts    4.51
+Rep3 Counts    4.27
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we will calculate the abundances in TPM units. Here, the first thing we do is normalize for gene length!</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_tpm</span> <span class="o">=</span> <span class="n">df</span>
+<span class="c1"># save gene sizes in new column</span>
+<span class="n">df_tpm</span><span class="p">[</span><span class="s1">&#39;kb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+
+<span class="c1"># gene size normalization is performed first</span>
+<span class="n">df_tpm</span> <span class="o">=</span> <span class="n">df_tpm</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">df_tpm</span><span class="o">.</span><span class="n">kb</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">df_tpm</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;kb&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[78]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rep1 Counts</th>
+      <th>Rep2 Counts</th>
+      <th>Rep3 Counts</th>
+    </tr>
+    <tr>
+      <th>Gene Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A(2kb)</th>
+      <td>5.0</td>
+      <td>6.00</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <th>B(4kb)</th>
+      <td>5.0</td>
+      <td>6.25</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <th>C(1kb)</th>
+      <td>5.0</td>
+      <td>8.00</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <th>D(10kb)</th>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>0.1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And now we perform the library size normalization, using abundances already normalized for gene length:</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># library size normalization (division by 10 instead of 10^6)</span>
+<span class="n">df_tpm</span> <span class="o">=</span> <span class="n">df_tpm</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">df_tpm</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">df_tpm</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;kb&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[79]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rep1 Counts</th>
+      <th>Rep2 Counts</th>
+      <th>Rep3 Counts</th>
+    </tr>
+    <tr>
+      <th>Gene Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A(2kb)</th>
+      <td>3.333</td>
+      <td>2.963</td>
+      <td>3.326</td>
+    </tr>
+    <tr>
+      <th>B(4kb)</th>
+      <td>3.333</td>
+      <td>3.086</td>
+      <td>3.326</td>
+    </tr>
+    <tr>
+      <th>C(1kb)</th>
+      <td>3.333</td>
+      <td>3.951</td>
+      <td>3.326</td>
+    </tr>
+    <tr>
+      <th>D(10kb)</th>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.022</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The sums of total normalized counts in each column are now equal (when using TPM)!</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TPM normalization sums per samples are equal (samples are comparable).</span>
+<span class="n">df_tpm</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;kb&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[82]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Rep1 Counts     9.999
+Rep2 Counts    10.000
+Rep3 Counts    10.000
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">tpm</span><span class="p">(</span><span class="n">genefile</span><span class="p">,</span> <span class="n">bamfile</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute the TPM (transcripts per million) metric for all genes within the genefile using</span>
+<span class="sd">    an RNA-Seq bamfile</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">total_mapped_reads</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="c1"># here you want all reads</span>
+    <span class="n">bam_iter</span> <span class="o">=</span> <span class="n">bamfile</span><span class="o">.</span><span class="n">fetch</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bam_iter</span><span class="p">:</span>
+        <span class="n">total_mapped_reads</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="n">gene_counts</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">genefile</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">tokens</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">gene_local</span> <span class="o">=</span> <span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+            <span class="n">gene_length</span> <span class="o">=</span> <span class="n">gene_local</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">gene_local</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">raw_count</span> <span class="o">=</span> <span class="n">read_count</span><span class="p">(</span><span class="n">gene_local</span><span class="p">,</span> <span class="n">bamfile</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="ow">in</span> <span class="n">gene_counts</span><span class="p">:</span>
+                <span class="n">gene_counts</span><span class="p">[</span><span class="n">tokens</span><span class="p">[</span><span class="mi">3</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(</span><span class="n">gene_counts</span><span class="p">[</span><span class="n">tokens</span><span class="p">[</span><span class="mi">3</span><span class="p">]][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">raw_count</span><span class="p">,</span> <span class="n">gene_length</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">gene_counts</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">tokens</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="p">:</span> <span class="p">(</span><span class="n">raw_count</span><span class="p">,</span> <span class="n">gene_length</span><span class="p">)})</span>   
+    
+    <span class="n">countsDF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">gene_counts</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;raw_count&#39;</span><span class="p">,</span> <span class="s1">&#39;gene_length&#39;</span><span class="p">])</span>
+    <span class="n">countsDF</span> <span class="o">=</span> <span class="n">countsDF</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">X</span><span class="o">=</span><span class="n">countsDF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">l</span><span class="o">=</span><span class="n">countsDF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">countsDF</span> <span class="o">=</span> <span class="n">countsDF</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">tpm</span> <span class="o">=</span> <span class="mf">1e6</span> <span class="o">*</span> <span class="p">(</span><span class="n">X</span><span class="o">/</span><span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">X</span><span class="o">/</span><span class="n">l</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">countsDF</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+
+gene_counts = tpm(&#39;gencode.v27.chr20.bed&#39;, bamfile)
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 6.91 s, sys: 134 ms, total: 7.04 s
+Wall time: 7.06 s
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gene_counts</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[85]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>raw_count</th>
+      <th>gene_length</th>
+      <th>tpm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5S_rRNA</th>
+      <td>0</td>
+      <td>119</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>5_8S_rRNA</th>
+      <td>0</td>
+      <td>152</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>AAR2</th>
+      <td>1114</td>
+      <td>34460</td>
+      <td>51.053667</td>
+    </tr>
+    <tr>
+      <th>ABALON</th>
+      <td>2185</td>
+      <td>1903</td>
+      <td>1813.300052</td>
+    </tr>
+    <tr>
+      <th>ABBA01031660.1</th>
+      <td>542</td>
+      <td>756</td>
+      <td>1132.229619</td>
+    </tr>
+    <tr>
+      <th>ABBA01031661.1</th>
+      <td>925</td>
+      <td>1253</td>
+      <td>1165.863437</td>
+    </tr>
+    <tr>
+      <th>ABBA01031663.1</th>
+      <td>635</td>
+      <td>790</td>
+      <td>1269.415085</td>
+    </tr>
+    <tr>
+      <th>ABBA01031674.1</th>
+      <td>600</td>
+      <td>728</td>
+      <td>1301.598058</td>
+    </tr>
+    <tr>
+      <th>ABHD12</th>
+      <td>2048</td>
+      <td>96241</td>
+      <td>33.606776</td>
+    </tr>
+    <tr>
+      <th>ABHD16B</th>
+      <td>2184</td>
+      <td>1491</td>
+      <td>2313.300286</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">rpkm</span><span class="p">(</span><span class="n">genefile</span><span class="p">,</span> <span class="n">bamfile</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute the RPKM (reads per kilobase per million mapped reads) metric for all genes within the genefile using</span>
+<span class="sd">    an RNA-Seq bamfile</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">total_mapped_reads</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="c1"># here you want all reads</span>
+    <span class="n">bam_iter</span> <span class="o">=</span> <span class="n">bamfile</span><span class="o">.</span><span class="n">fetch</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bam_iter</span><span class="p">:</span>
+        <span class="n">total_mapped_reads</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="n">gene_counts</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">genefile</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">tokens</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">gene_local</span> <span class="o">=</span> <span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+            <span class="n">gene_length</span><span class="o">=</span><span class="n">gene_local</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">gene_local</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">raw_count</span> <span class="o">=</span> <span class="n">read_count</span><span class="p">(</span><span class="n">gene_local</span><span class="p">,</span> <span class="n">bamfile</span><span class="p">)</span>
+            <span class="n">rpk_metric</span> <span class="o">=</span> <span class="mf">1e9</span> <span class="o">*</span> <span class="n">raw_count</span> \
+                            <span class="o">/</span> <span class="p">(</span><span class="n">total_mapped_reads</span> <span class="o">*</span> <span class="n">gene_length</span><span class="p">)</span>
+            <span class="n">gene_counts</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">tokens</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="p">:</span> <span class="p">(</span><span class="n">raw_count</span><span class="p">,</span> <span class="n">gene_length</span><span class="p">,</span> <span class="n">rpk_metric</span><span class="p">)})</span>  
+            
+    <span class="n">countsDF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">gene_counts</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;raw_count&#39;</span><span class="p">,</span> <span class="s1">&#39;gene_length&#39;</span><span class="p">,</span> <span class="s1">&#39;rpkm&#39;</span><span class="p">])</span>
+    <span class="n">countsDF</span> <span class="o">=</span> <span class="n">countsDF</span><span class="o">.</span><span class="n">T</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">countsDF</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+
+gene_counts_rpkm = rpkm(&#39;gencode.v27.chr20.bed&#39;, bamfile)
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 6.84 s, sys: 133 ms, total: 6.98 s
+Wall time: 6.99 s
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gene_counts_rpkm</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[88]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>raw_count</th>
+      <th>gene_length</th>
+      <th>rpkm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5S_rRNA</th>
+      <td>0.0</td>
+      <td>119.0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>5_8S_rRNA</th>
+      <td>0.0</td>
+      <td>152.0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>AAR2</th>
+      <td>1114.0</td>
+      <td>34460.0</td>
+      <td>19.369087</td>
+    </tr>
+    <tr>
+      <th>ABALON</th>
+      <td>2185.0</td>
+      <td>1903.0</td>
+      <td>687.942108</td>
+    </tr>
+    <tr>
+      <th>ABBA01031660.1</th>
+      <td>542.0</td>
+      <td>756.0</td>
+      <td>429.552975</td>
+    </tr>
+    <tr>
+      <th>ABBA01031661.1</th>
+      <td>925.0</td>
+      <td>1253.0</td>
+      <td>442.313201</td>
+    </tr>
+    <tr>
+      <th>ABBA01031663.1</th>
+      <td>635.0</td>
+      <td>790.0</td>
+      <td>481.599330</td>
+    </tr>
+    <tr>
+      <th>ABBA01031674.1</th>
+      <td>600.0</td>
+      <td>728.0</td>
+      <td>493.809125</td>
+    </tr>
+    <tr>
+      <th>ABHD12</th>
+      <td>2048.0</td>
+      <td>96241.0</td>
+      <td>12.749967</td>
+    </tr>
+    <tr>
+      <th>ABHD16B</th>
+      <td>2184.0</td>
+      <td>1491.0</td>
+      <td>877.635598</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
 </div>
 
 </div>
